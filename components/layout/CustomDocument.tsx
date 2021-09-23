@@ -3,10 +3,11 @@ const CustomDocument: React.FC = ({ children }) => {
   return (
     <>
       <Head>
-        <header></header>
-        <main>{children}</main>
-        <footer></footer>
+        <meta />
       </Head>
+      <header></header>
+      <main>{children}</main>
+      <footer></footer>
     </>
   );
 };
