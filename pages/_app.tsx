@@ -1,11 +1,15 @@
 import { CustomDocument } from "components";
+import { ApolloProvider } from "@apollo/client";
+import client from "../lib/apollo-client";
 import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <CustomDocument>
-      <Component {...pageProps} />
-    </CustomDocument>
+    <ApolloProvider client={client}>
+      <CustomDocument>
+        <Component {...pageProps} />
+      </CustomDocument>
+    </ApolloProvider>
   );
 }
 export default MyApp;
