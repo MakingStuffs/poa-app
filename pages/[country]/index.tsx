@@ -2,7 +2,7 @@ import { gql, useQuery } from "@apollo/client";
 import { Restaurant } from "types";
 
 import { useRouter } from "next/router";
-
+import Link from "next/link";
 const CountryRestaurants: React.FC = ({ children }) => {
   const router = useRouter();
 
@@ -16,7 +16,9 @@ const CountryRestaurants: React.FC = ({ children }) => {
   return (
     <div>
       {data.restaurants.map((r: Restaurant) => (
-        <span key={r.id}>{r.name}</span>
+        <Link key={r.id} href={`${router.query.country}/${r.slug}`}>
+          {r.name}
+        </Link>
       ))}
     </div>
   );
@@ -28,13 +30,6 @@ const GET_RESTAURANTS = gql`
       name
       id
       slug
-      menus {
-        name
-        dishes {
-          name
-          price
-        }
-      }
     }
   }
 `;
