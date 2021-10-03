@@ -1,11 +1,11 @@
 import { CustomDocument } from "components";
 import { ApolloProvider } from "@apollo/client";
-import client from "services/api/apolloClient";
+import { apolloClient } from "services";
 import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ApolloProvider client={client}>
+    <ApolloProvider client={apolloClient}>
       <CustomDocument>
         <Component {...pageProps} />
       </CustomDocument>
