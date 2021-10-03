@@ -1,5 +1,5 @@
 import { gql } from "@apollo/client";
-import client from "lib/apollo-client";
+import client from "services/api/apolloClient";
 import type { NextPage } from "next";
 import Head from "next/head";
 
