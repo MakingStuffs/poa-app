@@ -4,6 +4,7 @@ export interface MediaObject {
 
 export type Environment = {
   API_URL: string;
+  GQL_URL: string;
 };
 
 export interface Restaurant {
