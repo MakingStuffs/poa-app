@@ -1,4 +1,4 @@
-import { env } from "../constants";
+import { env } from "utils";
 import axios from "axios";
 import Cookie from "js-cookie";
 import router from "next/router";
