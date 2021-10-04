@@ -1,9 +1,6 @@
-import { AuthenticationState, User } from "types";
+import { AuthenticationState } from "types";
 
-const initialState: AuthenticationState = {
+export const authInitialState: AuthenticationState = {
   isAuthenticated: false,
-  setUser: () => {},
   user: null,
 };
-
-export default initialState;

@@ -1,5 +1,4 @@
 import { ServerStyleSheet } from "styled-components";
-import { CustomDocument } from "components";
 import Document, {
   DocumentContext,
   Html,
@@ -7,6 +6,8 @@ import Document, {
   Main,
   NextScript,
 } from "next/document";
+import Script from "next/script";
+import { env } from "utils";
 
 class PoaApp extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -36,7 +37,19 @@ class PoaApp extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head></Head>
+        <Head>
+          <Script
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=${env.GTAG_UID}`}
+          ></Script>
+          <Script
+            strategy="afterInteractive"
+            onLoad={() => {
+              gtag("js", new Date());
+              gtag("config", env.GTAG_UID);
+            }}
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />

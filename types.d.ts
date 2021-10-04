@@ -5,6 +5,7 @@ export interface MediaObject {
 export type Environment = {
   API_URL: string;
   GQL_URL: string;
+  GTAG_UID: string;
 };
 
 export interface Restaurant {
@@ -17,7 +18,6 @@ export interface Restaurant {
 
 export interface AuthenticationState {
   isAuthenticated: boolean;
-  setUser: (identifier: string, password: string) => Promise;
   user: User | null;
 }
 
@@ -31,6 +31,8 @@ export interface User {
   email: string;
   roles: UserRole[];
 }
+
+export type UserIdentifier = string;
 
 export interface UserRole {
   id: string;

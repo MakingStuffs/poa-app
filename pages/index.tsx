@@ -1,5 +1,5 @@
 import { gql } from "@apollo/client";
-import client from "services/api/apolloClient";
+import { apolloClient } from "services";
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -19,7 +19,7 @@ const Home: NextPage<{ restaurants: any }> = ({ restaurants }) => {
 };
 
 export async function getStaticProps() {
-  const { data } = await client.query({
+  const { data } = await apolloClient.query({
     query: gql`
       query Restaurants {
         restaurants {

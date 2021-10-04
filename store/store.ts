@@ -1,7 +1,7 @@
-import { configureStore } from "@reduxjs/toolkit";
 import authReducer from "store/reducers/authReducer";
+import { configureStore } from "@reduxjs/toolkit";
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     auth: authReducer,
   },
@@ -12,6 +12,3 @@ export type RootState = ReturnType<typeof store.getState>;
 
 // Ensure our dispatch is also always corresponding to this implementation
 export type AppDispatch = typeof store.dispatch;
-
-// Export our state store
-export default store;

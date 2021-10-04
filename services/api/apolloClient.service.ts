@@ -1,9 +1,7 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
-import { env } from "utils/constants/index";
+import { env } from "utils";
 
-const client = new ApolloClient({
+export const apolloClient = new ApolloClient({
   uri: env.GQL_URL,
   cache: new InMemoryCache(),
 });
-
-export default client;
