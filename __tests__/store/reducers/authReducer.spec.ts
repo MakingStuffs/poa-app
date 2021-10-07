@@ -1,19 +1,36 @@
-import { AnyAction } from "redux";
-import { authReducer, authInitialState, setUser } from "store";
+import { authReducer, authInitialState, setUser, clearUser } from "store";
 import { User } from "types";
-import { render, screen } from "utils/testing/testHelpers";
+
+const loggedInState: User = {
+  isActive: true,
+  blocked: false,
+  username: null,
+  registrationToken: null,
+  firstname: "Jim",
+  lastname: "Jo",
+  email: "EXAMPLE@makingstuffs.co.uk",
+  roles: [
+    {
+      id: "afadsfaf",
+      name: "Super Admin",
+      description:
+        "Super Admins can access and manage all features and settings.",
+      code: "strapi-super-admin",
+    },
+  ],
+};
 
 describe("authReducer", () => {
-  it("can log a user in", () => {
-    const newState = authReducer(
-      authInitialState,
-      setUser({
-        firstName: "John",
-        lastName: "John",
-      } as User)
-    );
+  it("sets user data and sets isAuthenticated to true", () => {
+    const newState = authReducer(authInitialState, setUser(loggedInState));
+    expect(newState.user).toEqual(loggedInState);
+    expect(newState.isAuthenticated).toBe(true);
+  });
 
-    expect(newState.user?.firstName).toBe("John");
-    expect(newState.user?.lastName).toBe("John");
+  it("clears user data and sets isAuthenticated to false", () => {
+    const newState = authReducer(
+      { isAuthenticated: true, user: loggedInState },
+      clearUser()
+    );
   });
 });

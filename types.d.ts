@@ -26,8 +26,8 @@ export interface User {
   blocked: boolean;
   username: null | string;
   registrationToken: null | string;
-  firstName: string;
-  lastName: string;
+  firstname: string;
+  lastname: string;
   email: string;
   roles: UserRole[];
 }

@@ -16,10 +16,7 @@ export const authSlice = createSlice({
       state.user = action.payload;
       return state;
     },
-    clearUser: (
-      state: AuthenticationState = authInitialState,
-      action: PayloadAction<UserIdentifier>
-    ) => {
+    clearUser: (state: AuthenticationState = authInitialState) => {
       return state;
     },
   },
