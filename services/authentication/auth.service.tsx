@@ -44,7 +44,7 @@ export const login = (identifier: string, password: string) => {
   return new Promise(async (resolve, reject) => {
     try {
       // Make our request to auth server
-      const request = await axios.post(`${env.API_URL}/auth/local`, {
+      const request = await axios.post(`${env.API_URL}/auth/login`, {
         identifier,
         password,
       });
