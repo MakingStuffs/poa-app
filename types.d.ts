@@ -40,3 +40,7 @@ export interface UserRole {
   description: string;
   code: string;
 }
+
+export interface FormProps extends React.HTMLAttributes<HTMLFormElement> {
+  onSubmit: React.FormEventHandler;
+}
