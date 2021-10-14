@@ -44,3 +44,5 @@ export interface UserRole {
 export interface FormProps extends React.HTMLAttributes<HTMLFormElement> {
   onSubmit: React.FormEventHandler;
 }
+
+export interface InputProps extends React.HTMLAttributes<HTMLInputElement> {}
