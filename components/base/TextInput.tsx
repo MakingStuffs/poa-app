@@ -1,4 +1,4 @@
-import { InputProps } from "types";
+import { InputProps } from "components/base/types";
 import { useState } from "react";
 
 const TextInput: React.FC<InputProps> = ({ ...rest }) => {
