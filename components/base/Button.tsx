@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ButtonProps } from "types";
+import { ButtonProps } from "components/base/types";
 
 const Button: React.FC<ButtonProps> = ({ clickHandler, children, ...rest }) => {
   return (
