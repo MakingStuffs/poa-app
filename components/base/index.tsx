@@ -2,3 +2,4 @@ export { default as Form } from "components/base/Form";
 export { default as TextInput } from "components/base/TextInput";
 export { default as Button } from "components/base/Button";
 export { default as DropDown } from "components/base/DropDown";
+export { default as List } from "components/base/List";
