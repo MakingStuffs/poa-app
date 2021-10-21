@@ -11,3 +11,8 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
 export interface DropDownProps extends React.HTMLAttributes<HTMLSelectElement> {
   changeCallback?: (event: React.ChangeEvent) => void;
 }
+
+export interface ListProps
+  extends React.HTMLAttributes<HTMLUListElement | HTMLOListElement> {
+  isOrdered: boolean;
+}
