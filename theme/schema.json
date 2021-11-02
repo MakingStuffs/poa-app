@@ -1,13 +1,55 @@
 {
   "data": {
     "light": {
-      "id": "",
-      "name": "",
-      "colors": {},
-      "font": {},
-      "shadow": {},
-      "spacing": {},
-      "border": {}
+      "id": "T_001",
+      "name": "Light",
+      "colors": {
+        "body": "",
+        "text": "",
+        "button": {
+          "background": "",
+          "text": ""
+        },
+        "link": {
+          "text": "",
+          "opacity": "",
+          "weight": "",
+          "hover": {
+            "text": "",
+            "opacity": "",
+            "background": ""
+          }
+        },
+        "modal": {
+          "background": "",
+          "text": ""
+        }
+      },
+      "font": {
+        "size": {
+          "body": "",
+          "heading": "",
+          "meta": ""
+        },
+        "family": ""
+      },
+      "shadow": "",
+      "spacing": {
+        "padding": {
+          "small": "",
+          "medium": "",
+          "large": ""
+        },
+        "margin": {
+          "small": "",
+          "medium": "",
+          "large": ""
+        }
+      },
+      "border": {
+        "radius": "",
+        "width": ""
+      }
     }
   }
 }
