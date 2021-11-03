@@ -4,51 +4,57 @@
       "id": "T_001",
       "name": "Light",
       "colors": {
-        "body": "",
-        "text": "",
+        "body": "var(--white)",
+        "text": "var(--black)",
         "button": {
-          "background": "",
-          "text": ""
+          "background": "var(--secondary)",
+          "text": "var(--white)"
         },
         "link": {
-          "text": "",
-          "opacity": "",
-          "weight": "",
+          "text": "var(--black)",
+          "opacity": "1",
+          "weight": "400",
+          "background": "transparent",
           "hover": {
-            "text": "",
-            "opacity": "",
-            "background": ""
+            "text": "var(--black)",
+            "opacity": "1",
+            "background": "var(--tertiary)"
           }
         },
         "modal": {
-          "background": "",
-          "text": ""
+          "background": "var(--white)",
+          "text": "var(--black)"
         }
       },
       "font": {
         "size": {
-          "body": "",
-          "heading": "",
-          "meta": ""
+          "body": "var(--text-body)",
+          "heading": "var(--text-head)",
+          "meta": "var(--text-meta)"
         },
-        "family": ""
+        "family": "'Merriweather Sans'"
       },
-      "shadow": "",
+      "shadow": "0 0 0.3rem rgba(0,0,0,0.3)",
       "spacing": {
         "padding": {
-          "small": "",
-          "medium": "",
-          "large": ""
+          "small": "0.5rem",
+          "medium": "1rem",
+          "large": "1.5rem"
         },
         "margin": {
-          "small": "",
-          "medium": "",
-          "large": ""
+          "small": "0.5rem",
+          "medium": "1rem",
+          "large": "1.5rem"
         }
       },
       "border": {
-        "radius": "",
-        "width": ""
+        "radius": {
+          "small": "5px",
+          "medium": "10px",
+          "large": "15px"
+        },
+        "width": "1px",
+        "color": "rgba(0,0,0,0.2)"
       }
     }
   }
